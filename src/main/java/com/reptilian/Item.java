@@ -25,16 +25,24 @@ public class Item {
         items.put(-1, new Item(-1, "Eye of the Herald"));
         items.put(1001, new Item(1001, "Boots"));
         items.put(1004, new Item(1004, "Faerie Charm"));
+        items.put(1006, new Item(1006, "Rejuvination Bead"));
+        items.put(1011, new Item(1011, "Giant's Belt"));
         items.put(1018, new Item(1018, "Cloak of Agility"));
         items.put(1026, new Item(1026, "Blasting Wand"));
+        items.put(1027, new Item(1027, "Sapphire Crystal"));
+        items.put(1028, new Item(1028, "Ruby Crystal"));
         items.put(1029, new Item(1029, "Cloth Armor"));
+        items.put(1031, new Item(1031, "Chain Vest"));
+        items.put(1033, new Item(1033, "Null-Magic Mantle"));
         items.put(1036, new Item(1036, "Long Sword"));
+        items.put(1037, new Item(1037, "Pickaxe"));
         items.put(1038, new Item(1038, "B. F. Sword"));
         items.put(1042, new Item(1042, "Dagger"));
         items.put(1052, new Item(1052, "Amplifying Tome"));
         items.put(1054, new Item(1054, "Doran's Shield"));
         items.put(1055, new Item(1055, "Doran's Blade"));
         items.put(1056, new Item(1056, "Doran's Ring"));
+        items.put(1058, new Item(1058, "Needlessly Large Rod"));
         items.put(1083, new Item(1083, "Cull"));
         items.put(1082, new Item(1082, "Dark Seal"));
         items.put(1101, new Item(1101, "Scorchclaw Pup"));
@@ -55,6 +63,7 @@ public class Item {
         items.put(2151, new Item(2151, "Elixir of Avarice"));
         items.put(2152, new Item(2152, "Elixir of Force"));
         items.put(2422, new Item(2422, "Slightly Magical Boots"));
+        items.put(2508, new Item(2508, "Fated Ashes"));
         items.put(3006, new Item(3006, "Berserker's Greaves"));
         items.put(3009, new Item(3009, "Boots of Swiftness"));
         items.put(3010, new Item(3010, "Symbiotic Soles"));
@@ -62,8 +71,15 @@ public class Item {
         items.put(3020, new Item(3020, "Sorcerer's Shoes"));
         items.put(3047, new Item(3047, "Plated Steelcaps"));
         items.put(3070, new Item(3070, "Tear of the Goddess"));
+        items.put(3076, new Item(3076, "Bramble Vest"));
+        items.put(3105, new Item(3105, "Aegis of the Legion"));
+        items.put(3108, new Item(3108, "Fiendish Codex"));
         items.put(3111, new Item(3111, "Mercury's Treads"));
         items.put(3112, new Item(3112, "Guardian's Orb"));
+        items.put(3113, new Item(3113, "Aether Wisp"));
+        items.put(3114, new Item(3114, "Forbidden Idol"));
+        items.put(3123, new Item(3123, "Executioner's Calling"));
+        items.put(3133, new Item(3133, "Caulfield's Warhammer"));
         items.put(3158, new Item(3158, "Ionian Boots of Lucidity"));
         items.put(3172, new Item(3172, "Zephyr"));
         items.put(3177, new Item(3177, "Guardian's Blade"));
@@ -72,7 +88,12 @@ public class Item {
         items.put(3363, new Item(3363, "Farsight Alteration"));
         items.put(3364, new Item(3364, "Oracle Lens"));
         items.put(3400, new Item(3400, "Your Cut"));
+        items.put(3801, new Item(3801, "Crystalline Bracer"));
+        items.put(3803, new Item(3803, "Catalyst of Aeons"));
         items.put(3865, new Item(3865, "World Atlas"));
+        items.put(4630, new Item(4630, "Blighting Jewel"));
+        items.put(4642, new Item(4642, "Bandleglass Mirror"));
+        items.put(6660, new Item(6660, "Bami's Cinder"));
 
         return items;
     }

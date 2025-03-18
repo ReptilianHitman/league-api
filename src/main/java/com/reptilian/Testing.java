@@ -6,8 +6,8 @@ public class Testing {
     public static void main(String[] args) {
         Map<Integer, Item> items = Item.getItems();
 
-        for (Item item : items.values()) {
-            System.out.println(item.getName());
+        for (int i = 0; i <= items.keySet().stream().max(Integer::compareTo).get(); i++) {
+            System.out.println(i + ": " + (items.get(i) != null ? items.get(i).getName() : "null"));
         }
     }
 }
