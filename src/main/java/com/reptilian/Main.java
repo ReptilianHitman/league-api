@@ -17,8 +17,8 @@ import java.net.URISyntaxException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 public class Main extends Application {
-    private final int SCREEN_WIDTH = 1920;
-    private final int SCREEN_HEIGHT = 1080;
+    private static final int SCREEN_WIDTH = 1920;
+    private static final int SCREEN_HEIGHT = 1080;
     private final String DEFAULT_USER = "ReptilianHitman#EUW";
 
     @Override
@@ -76,7 +76,7 @@ public class Main extends Application {
             matchInfo1.setText(infoToString(null, null, 1));
         });
 
-        getMatchesButton.setOnAction(event -> {
+        getMatchesButton.setOnAction(_ -> {
             String[] username = usernameInput.getLength() == 0 ? inputToUserTag(DEFAULT_USER) : inputToUserTag(usernameInput.getText());
             if (usernameInput.getLength() == 0) usernameInput.setText(DEFAULT_USER);
 
@@ -105,7 +105,7 @@ public class Main extends Application {
             matchList.getOnMouseClicked().handle(null);
         });
 
-        matchList.setOnMouseClicked(event -> {
+        matchList.setOnMouseClicked(_ -> {
             if (matchList.getSelectionModel().getSelectedItem() == null)
                 return;
 
@@ -120,7 +120,7 @@ public class Main extends Application {
             }
         });
 
-        getMatchInfoButton.setOnAction(event -> {
+        getMatchInfoButton.setOnAction(_ -> {
             JsonNode node;
 
             try {
@@ -174,7 +174,6 @@ public class Main extends Application {
                 }
 
                 JsonNode playerNode = null;
-                JsonNode positionOpponent = null;
                 ArrayNode players = (ArrayNode) node.get("metadata").get("participants");
 
                 for (int i = 0; i < players.size(); i++) {
@@ -191,11 +190,6 @@ public class Main extends Application {
                 int playerDeaths = playerNode.get("deaths").asInt();
                 int playerAssists = playerNode.get("assists").asInt();
                 String playerPosition = playerNode.get("teamPosition").asText();
-                for (int i = 0; i < players.size(); i++)
-                    if (node.get("info").get("participants").get(i).get("teamPosition").asText().equals(playerPosition) && !node.get("info").get("participants").get(i).get("puuid").asText().equals(puuid))
-                        positionOpponent = node.get("info").get("participants").get(i);
-                String positionOpponentChampion = positionOpponent == null || positionOpponent.get("championName").asText().isEmpty() ? null : toReadable(positionOpponent.get("championName").asText());
-                int positionGoldDifference = 0;
 
                 return """
                         Champion:\t%s

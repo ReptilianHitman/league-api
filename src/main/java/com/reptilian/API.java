@@ -16,7 +16,7 @@ import java.util.stream.StreamSupport;
 public class API {
     private final String API_KEY = System.getenv("RIOT_API_KEY");
     private final String BASE_URL = "https://europe.api.riotgames.com/";
-    private HttpClient client;
+    private final HttpClient client;
     private HttpRequest request;
 
     public API() {

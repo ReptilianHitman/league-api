@@ -13,11 +13,11 @@ import java.net.URISyntaxException;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class Replay extends Application {
-    private final int SCREEN_WIDTH = 1920;
-    private final int SCREEN_HEIGHT = 1080;
+    private static final int SCREEN_WIDTH = 1920;
+    private static final int SCREEN_HEIGHT = 1080;
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         Pane pane = new Pane();
         API api = new API();
 
@@ -27,8 +27,8 @@ public class Replay extends Application {
         matchIDInput.setMaxWidth(140);
         matchIDInput.setMinHeight(26);
         matchIDInput.setMaxHeight(26);
-        matchIDInput.setLayoutX(SCREEN_WIDTH / 2 - matchIDInput.getMaxWidth() / 2);
-        matchIDInput.setLayoutY(SCREEN_HEIGHT / 2 - matchIDInput.getMaxHeight() / 2);
+        matchIDInput.setLayoutX(SCREEN_WIDTH / 2f - matchIDInput.getMaxWidth() / 2);
+        matchIDInput.setLayoutY(SCREEN_HEIGHT / 2f - matchIDInput.getMaxHeight() / 2);
 
         pane.getChildren().addAll(matchIDInput);
 

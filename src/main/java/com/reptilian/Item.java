@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Item {
-    private static Map<Integer, Item> items = new HashMap<>();
+    private static final Map<Integer, Item> items = new HashMap<>();
     private final int value;
     private final String name;
 
