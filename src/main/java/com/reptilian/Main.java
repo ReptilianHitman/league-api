@@ -66,6 +66,7 @@ public class Main extends Application {
 
         usernameInput.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
+                usernameInput.setText(usernameInput.getText().trim());
                 getMatchesButton.getOnAction().handle(null);
                 return;
             }
