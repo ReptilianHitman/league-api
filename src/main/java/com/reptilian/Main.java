@@ -20,9 +20,9 @@ public class Main extends Application {
     private final int SCREEN_WIDTH = 1920;
     private final int SCREEN_HEIGHT = 1080;
     private final String DEFAULT_USER = "ReptilianHitman#EUW";
-    // RGAPI-6e9fa07d-1a09-4dca-b639-960669c38647
+
     @Override
-    public void start(Stage stage) throws URISyntaxException, IOException, InterruptedException {
+    public void start(Stage stage) {
         Pane pane = new Pane();
         API api = new API();
         AtomicReference<List<String>> matchIDs = new AtomicReference<>();
